@@ -1,0 +1,249 @@
+/* Orbitron Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================
+   ⚙️ Base Global Styles
+============================= */
+body {
+  background-color: #0a0a23;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  background-image: radial-gradient(circle, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+button, a {
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+/* =============================
+   🔮 Neon Effects
+============================= */
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff, 0 0 32px #00ffff;
+}
+
+.neon-border {
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 0 6px rgba(168, 85, 247, 0.5);
+}
+
+.shadow-neon {
+  box-shadow: 0 0 12px #ff00ff, 0 0 24px #00ffff;
+}
+
+.hover\:shadow-neon:hover {
+  box-shadow: 0 0 10px #b388ff, 0 0 20px #b388ff;
+}
+
+/* =============================
+   🧊 Glassmorphism Cards
+============================= */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* =============================
+   ⚡ Link Hover Effects
+============================= */
+.glow-link {
+  position: relative;
+}
+.glow-link:hover {
+  text-shadow: 0 0 6px #ff00ff, 0 0 12px #ff00ff;
+  transform: scale(1.05);
+}
+
+/* =============================
+   💡 Neon Button
+============================= */
+.btn-glow {
+  background-color: transparent;
+  border: 1px solid #a855f7;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 8px #a855f7, 0 0 16px #00ffff;
+  transition: all 0.3s ease;
+}
+.btn-glow:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px #a855f7, 0 0 24px #00ffff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* =============================
+   ✨ Pulse Animation
+============================= */
+.glow-pulse {
+  filter: drop-shadow(0 0 10px #9333ea);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #9333ea);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px #9333ea);
+  }
+}
+
+/* =============================
+   🧠 Glitch Animation
+============================= */
+.glitch {
+  position: relative;
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: #0ff;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+  color: #f0f;
+  z-index: -1;
+}
+
+@keyframes glitchTop {
+  0% { clip-path: inset(0 0 90% 0); }
+  50% { clip-path: inset(30% 0 30% 0); transform: translateX(5px); }
+  100% { clip-path: inset(80% 0 10% 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip-path: inset(80% 0 10% 0); }
+  50% { clip-path: inset(30% 0 30% 0); transform: translateX(-5px); }
+  100% { clip-path: inset(0 0 90% 0); }
+}
+
+/* =============================
+   🎯 Animations Utilities
+============================= */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 1s ease-in-out forwards;
+  }
+
+  .animate-pop {
+    animation: popIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+}
+
+/* =============================
+   🧭 Scrollbar Styling
+============================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 8px;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.neon-text {
+  text-shadow: 0 0 6px #9b5de5, 0 0 12px #9b5de5;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 12px rgba(155, 93, 229, 0.3);
+}
+.neon-text {
+  color: #a855f7;
+  text-shadow: 0 0 6px #a855f7, 0 0 12px #a855f7;
+}
+
+.neon-glass {
+  background: rgba(18, 18, 50, 0.65);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.btn-glow {
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  box-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
+}
+.btn-glow:hover {
+  background-color: #9333ea;
+  box-shadow: 0 0 15px #9333ea, 0 0 30px #9333ea;
+}
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.7), 0 0 30px rgba(168, 85, 247, 0.4);
+}

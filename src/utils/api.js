@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000/api/projects/';
+const BASE_URL = 'https://plutox-a02j.onrender.com/api/projects/';
 
 // ✅ GET all projects
 export async function getProjects() {

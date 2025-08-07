@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000/api';
+const BASE_URL = 'https://plutox-a02j.onrender.com/api';
 
 // Send contact form data to backend
 export async function sendContactEmail(formData) {

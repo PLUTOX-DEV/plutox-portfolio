@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/media/:path*',
-        destination: 'http://localhost:8000/media/:path*',
+        destination: 'https://alphadao.onrender.com/media/:path*',
       },
     ];
   },

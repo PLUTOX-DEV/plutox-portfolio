@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/media/:path*',
-        destination: 'https://alphadao.onrender.com/media/:path*',
+        destination: 'https://plutox-a02j.onrender.com/media/:path*',
       },
     ];
   },
@@ -14,7 +14,7 @@ const nextConfig = {
       'cdn.example.com',
       'images.unsplash.com',
       'your-other-domains.com',
-      'alphadao.onrender.com', // ✅ Add this
+      'plutox-a02j.onrender.com', // ✅ Add this
     ],
   },
 };

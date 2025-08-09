@@ -9,7 +9,13 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['localhost', 'cdn.example.com', 'images.unsplash.com', 'your-other-domains.com'],
+    domains: [
+      'localhost',
+      'cdn.example.com',
+      'images.unsplash.com',
+      'your-other-domains.com',
+      'alphadao.onrender.com', // ✅ Add this
+    ],
   },
 };
 
